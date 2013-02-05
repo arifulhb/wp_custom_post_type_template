@@ -1,0 +1,53 @@
+/*
+Document   : wp_custom_post_type
+Created on : Feb 5, 2013, 5:28:24 PM
+Author     : Ariful Haque Bhuiyan <arifulhb@greentechcs.com at GREENTech Consultancy Services>
+Description:
+Purpose of the stylesheet follows.
+*/
+
+div#people_meta_basic
+{
+    overflow: hidden;
+    padding-bottom: 10px;
+    background: rgba(0,0,0,0.1);
+}
+div#cpt_meta_basic{
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+
+div.meta-box
+{
+    width:100%;
+    float: left;
+    overflow: hidden;
+}
+div.row
+{
+    float: left;
+    width: 98%;
+    margin: 3px;
+    padding: 5px;
+    background: white;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+div.title
+{
+    float: left;
+    width: 20%;
+    margin-top:5px;
+    font-weight: bold;
+}
+div.data{
+    float: left;
+    width: 80%;
+    overflow: hidden;
+}
+div.data input{
+    width: 95%;
+}
+.item{font-weight: bold;color: green;}
