@@ -6,17 +6,10 @@ Description:
 Purpose of the stylesheet follows.
 */
 
-div#people_meta_basic
-{
-    overflow: hidden;
-    padding-bottom: 10px;
-    background: rgba(0,0,0,0.1);
-}
 div#cpt_meta_basic{
     overflow: hidden;
     padding-bottom: 10px;
 }
-
 
 div.meta-box
 {
