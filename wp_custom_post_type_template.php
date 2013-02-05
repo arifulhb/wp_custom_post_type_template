@@ -1,7 +1,15 @@
 <?php
 /*
- * WordPress Template
- * Custom Post Type
+ * * ************************************************************
+ * WordPress Custom Post Type Template
+ * by Ariful Haque Bhuiyan
+ * from GREENTech Consultancy Services.
+ * email: ariful@greentechcs.com
+ * web: www.greentechcs.com
+ * ************************************************************
+ * License:
+ * You are allowed to use this template for learn, modify and use.
+ * Not removing the information above will considered as display of courtesy knowledge.
  */
 
 //Courses CPT
@@ -63,7 +71,6 @@ function cpt_basic_meta()
     $custom_field_2          =$custom['custom_field_2'][0];
     $custom_field_3          =$custom['custom_field_3'][0];
 
-
     ?>
 
     <div  class="meta-box">
@@ -104,7 +111,7 @@ function cpt_basic_meta()
 
     <?php
 
-}//END Function people_basic_meta
+}//END Function cpt_basic_meta
 
 
 /*Course Custom Post Type Custom Fields Save*/
@@ -124,18 +131,22 @@ function save_cpt_meta_details()
   update_post_meta($post_id, "custom_field_3", $_POST["custom_field_3"]);
 
 
-} //end function save_Course_meta_details
+} //end function save_cpt_meta_details
 
 
 
-//Custom Column Details
-    add_action("manage_posts_custom_column",  "my_custom_post_custom_columns");
-    add_filter("manage_edit-my_custom_post_columns", "my_custom_post_edit_columns");
+
+/*
+ * -> Custom Column Details
+ * Two filters bellow and two functions bellow is responsible for showing Colums with information
+ */
+add_action("manage_posts_custom_column",  "my_custom_post_custom_columns");
+add_filter("manage_edit-my_custom_post_columns", "my_custom_post_edit_columns");
 
 function my_custom_post_edit_columns($columns){
   $columns = array(
     "cb" => "<input type=\"checkbox\" />",
-    "title" => "Name",
+    "title" => "Title",
     "custom_field_1" => "Custom Field 1",
       "categories"=>"Categories",
       "tags"=>"Tags",
@@ -160,5 +171,13 @@ function my_custom_post_custom_columns($column){
   }
 }/*END FUNCTION portfolio_custom_columns*/
 
+/*
+ * How to display the custom meta data?
+ *
+ * To show a custom meta field e.g. custom_field_1 , use the line bellow.
+ *
+ * echo get_post_meta(get_the_id(), 'custom_field_1',true);
+ * 
+ */
 
 ?>
